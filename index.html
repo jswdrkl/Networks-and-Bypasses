@@ -33,6 +33,17 @@
       word-break: keep-all;
       overflow-wrap: break-word;
       hyphens: none;
+      /* Enhanced font size and comfortable reading metrics */
+      font-size: 1.125rem; /* ~18px for mobile */
+      line-height: 1.95;
+      letter-spacing: 0.012em;
+    }
+
+    @media (min-width: 640px) {
+      .content-justified {
+        font-size: 1.25rem; /* 20px for desktop/tablets */
+        line-height: 2.05;
+      }
     }
 
     /* Pulse and flow animations for the SVG graphic */
@@ -71,12 +82,13 @@
 </head>
 <body class="bg-[#fcfbf9] text-[#1e293b] dark:bg-[#0b1120] dark:text-[#e2e8f0] transition-colors duration-300 min-h-screen py-8 px-4 sm:px-6 md:px-8 selection:bg-cyan-500 selection:text-white">
 
+  <!-- Top Action Bar: Share and Theme Toggle -->
   <div class="max-w-3xl mx-auto flex items-center justify-end gap-3 mb-6">
     <!-- Share Button -->
     <button 
       id="shareBtn" 
       aria-label="Share" 
-      class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200 border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-95"
+      class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all duration-200 border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-95 cursor-pointer"
     >
       <svg class="w-4 h-4 text-cyan-600 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -88,7 +100,7 @@
     <button 
       id="themeToggleBtn" 
       aria-label="Toggle theme" 
-      class="inline-flex items-center justify-center p-2 rounded-xl transition-all duration-200 border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-95"
+      class="inline-flex items-center justify-center p-2 rounded-xl transition-all duration-200 border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur shadow-sm hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-95 cursor-pointer"
     >
       <!-- Sun Icon (for dark mode) -->
       <svg id="sunIcon" class="w-5 h-5 text-amber-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,6 +120,7 @@
       नेटवर्क्स आणि बायपासेस..
     </h1>
 
+    <!-- Animated SVG Graphic representing networks, valves, flows and bypasses -->
     <div class="my-6 sm:my-8 rounded-2xl overflow-hidden border border-slate-200/70 dark:border-slate-700/50 bg-gradient-to-br from-slate-50 via-cyan-50/30 to-indigo-50/20 dark:from-slate-950/80 dark:via-slate-900/90 dark:to-cyan-950/30 shadow-inner p-2 sm:p-4">
       <svg class="w-full h-auto max-h-[300px] select-none" viewBox="0 0 760 300" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -201,7 +214,8 @@
       </svg>
     </div>
 
-    <article class="space-y-5 text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed sm:leading-loose content-justified">
+    <!-- Main Body Article Text -->
+    <article class="space-y-6 text-slate-800 dark:text-slate-200 content-justified font-normal">
       <p>
         'बायपास' या शब्दाचा सर्वसाधारण अर्थ एखाद्या गोष्टीच्या मधून जाण्याऐवजी, त्याला वळसा घालून किंवा त्याच्या कडेने जाणारा पर्यायी रस्ता किंवा मार्ग असा आहे.
       </p>
@@ -251,24 +265,26 @@
       </p>
 
       <p>
-        हे झाले आपल्या आतल्या इलेक्ट्रिकल आणि प्लंबिंग इंट्रानेट बद्दल. परंतु समाजात या वैयक्तिक प्रणाली एकेकट्या काम करू शकत नाहीत. व्यक्ती-कुटुंब-नातीगोती-मित्र-समाज-देश याने तयार झालेल्या अवाढव्य जागतिक इंटरनेटचा त्या एक भाग असतात. त्या वर्ल्ड-वाइड-वेब बरोबर प्रत्येकाचे अनेक पॉइंट ऑफ इंटरकनेक्ट असतात. आपल्या इंट्रानेटला या महाजालाशी जोडणारी संपर्क आणि नातेसंबंधांच्या विणेच्या ‘बॅंडविड्थ’ची क्षमता Gratitude Bytes मधे मोजली जाते.
+        हे झाले आपल्या आतल्या इलेक्ट्रिकल आणि प्लंबिंग इंट्रानेट बद्दल. परंतु समाजात या वैयक्तिक प्रणाली एकेकट्या काम करू शकत नाहीत. व्यक्ती-कुटुंब-नातीगोती-मित्र-समाज-देश याने तयार झालेल्या अवाढव्य जागतिक इंटरनेटचा त्या एक भाग असतात. त्या वर्ल्ड-वाइड-वेब बरोबर प्रत्येकाचे अनेक point of interconnect असतात. आपल्या इंट्रानेटला या महाजालाशी जोडणारी संपर्क आणि नातेसंबंधांच्या विणेच्या ‘बॅंडविड्थ’ची क्षमता Gratitude Bytes मधे मोजली जाते.
       </p>
 
       <p>
         म्हणून मग, आपल्या अंगी मुरलेल्या कृतज्ञतेच्या G-bytesचा आकडा जितका मोठा तितके आपल्या इंट्रानेटचे जागतिक नातेसंबंधांच्या वर्ल्ड-वाइड-वेब बरोबरचे कनेक्शन स्टेबल असणार हे सांगणे न लगे!
       </p>
 
-      <div class="pt-8 text-center space-y-3 select-none">
-        <p class="text-base sm:text-lg tracking-widest text-slate-500 dark:text-slate-400 font-medium">
+      <!-- Centered Closing Section -->
+      <div class="pt-10 text-center space-y-4 select-none">
+        <p class="text-lg sm:text-xl tracking-widest text-slate-500 dark:text-slate-400 font-medium">
           २०२६०१११
         </p>
-        <p class="text-xl sm:text-2xl text-cyan-600 dark:text-cyan-400 tracking-wider">
+        <p class="text-2xl sm:text-3xl text-cyan-600 dark:text-cyan-400 tracking-wider">
           ❂❂❂
         </p>
       </div>
     </article>
   </main>
 
+  <!-- Toast Notification for Copy -->
   <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm font-medium shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50 font-marathi">
     लिंक कॉपी झाली!
   </div>
@@ -289,7 +305,6 @@
       }
     }
 
-    // Initialize theme based on preference or system
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
@@ -331,7 +346,6 @@
         try {
           await navigator.share(shareData);
         } catch (err) {
-          // If dismissed or rejected, don't trigger error toast
           if (err.name !== 'AbortError') {
             copyToClipboard();
           }
